@@ -1,0 +1,8 @@
+set draw_borders true
+set column_ratios 1,1
+set show_cursor false
+set preview_images true
+
+map <c-w> quit
+map nf console touch 
+map nd console mkdir 
