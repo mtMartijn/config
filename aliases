@@ -7,6 +7,8 @@ alias ai='sudo apt-get install --assume-yes'
 alias as='sudo apt-cache search'
 alias ar='sudo apt-get --purge remove'
 alias au='sudo apt-get update'
+alias ad='sudo apt-cache depends'
+alias al='sudo dpkg -l | grep'
 
 # less & grep
 alias l='fc -s | less -S'
@@ -15,13 +17,18 @@ alias l='fc -s | less -S'
 # Utils
 alias q='exit'
 alias cl='clear'
+alias cat='cat -n'
 alias udb='sudo updatedb'
 alias loc='locate'
 alias rbt='sudo reboot'
 alias blk='sudo blkid'
 alias src='source ~/.zshrc'
 alias unp='aunpack'
+alias fnd='find . -print | grep -i'
+alias ctrl='setxkbmap -option ctrl:nocaps'
+alias py='python3'
 alias getip='curl orga.cat/ip'
+alias lines='cloc .'
 getiip() {
 	ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/'
 }
@@ -34,12 +41,15 @@ alias gvi='ranger ~/videos/'
 alias gpi='ranger ~/pictures/'
 alias gco='ranger ~/code/'
 alias gpr='ranger ~/programs/'
+alias gmu='ranger ~/music/'
 alias gap='ranger ~/code/OF_v0.8.4/apps/myApps/'
 alias gr='ranger /'
 alias gd='ranger /dev/'
 alias ge='ranger /etc/'
 alias gu='ranger /usr/'
-alias gm='ranger /media/'
+alias gi='ranger /usr/include/'
+alias gm='ranger /mnt/'
+alias mt='ranger ~/code/M10/M10/'
 
 # Brightness
 alias b1='xbacklight -set 20'
@@ -49,12 +59,15 @@ alias b4='xbacklight -set 80'
 alias b5='xbacklight -set 100'
 
 # Config files
-alias ea='vim ~/.aliases'
+alias ea='vim ~/config/aliases'
+alias ev='vim ~/config/vimrc'
+alias ei='vim ~/config/i3rc'
+alias er='vim ~/config/rangerrc'
 alias ez='vim ~/.zshrc'
-alias ev='vim ~/.vimrc'
-alias ei='vim ~/.i3/config'
-alias er='vim ~/.config/ranger/rc.conf'
 
 # gpg & tor
 alias torb='sh ~/programs/tor-browser/Browser/start-tor-browser'
 
+# ssh
+alias scluster='ssh mcohen@hpc05.tudelft.net'
+alias snas='ssh steelelab@145.'

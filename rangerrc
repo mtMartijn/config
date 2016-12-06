@@ -4,5 +4,7 @@ set show_cursor false
 set preview_images true
 
 map <c-w> quit
-map nf console touch 
-map nd console mkdir 
+map ff console touch 
+map uz console shell aunpack %s
+map mk console mkdir 
+map <C-v> eval fm.open_console('shell vim')
