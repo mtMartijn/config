@@ -84,5 +84,7 @@ noremap <F3> :e $MYVIMRC<CR>
 " Go to respective c++ header/source file
 noremap <Leader>h :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
+" :s/\r//g "This is to get rid of ^M
+
 " create ctags of project
 " noremap <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
