@@ -8,3 +8,4 @@ map ff console touch
 map uz console shell aunpack %s
 map mk console mkdir 
 map <C-v> eval fm.open_console('shell vim')
+map <C-x> console shell chmod -x %s
