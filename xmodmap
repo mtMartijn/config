@@ -1,0 +1,6 @@
+clear mod5
+keycode 108 = Alt_L
+clear Lock
+clear Control
+keycode 66 = Control_L Control_L
+add Control = Control_L Control_R

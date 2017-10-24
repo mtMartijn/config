@@ -3,7 +3,8 @@ set column_ratios 1,1
 set show_cursor false
 set preview_images true
 
-map <c-w> quit
+map <C-w> quit
+map xx console delete
 map ff console touch 
 map uz console shell aunpack %s
 map mk console mkdir 
