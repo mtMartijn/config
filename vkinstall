@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo cp -R $PWD/etc/. /usr/share/vulkan/
+sudo cp -R $PWD/bin/. /usr/bin/
+sudo cp -R $PWD/lib/. /usr/lib/
+sudo cp -R $PWD/include/. /usr/include/

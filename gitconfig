@@ -1,0 +1,58 @@
+[alias]
+    co = checkout
+    br = branch -av
+    new = checkout -b
+    st = status -sb
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    all = add --all
+    cm = commit -m
+    dfnm = diff --name-only
+    cl = clone --recursive
+    pu = push -u origin master
+    pl = pull origin
+    fix = commit --amend -m
+
+[user]
+    name = m
+    email = m@MT.co
+
+[core]
+    editor = vim
+    pager = less
+
+[web]
+    browser = google-chrome
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = vimdiff
+
+[mergetool]
+    prompt = false
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
