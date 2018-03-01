@@ -1,0 +1,19 @@
+# Remap prefix
+unbind C-b
+set-option -g prefix C-a
+bind C-a send-prefix
+
+# Split commands
+bind i split-window -h
+bind u split-window -v
+unbind '"'
+unbind %
+
+# Reload conf
+bind r source-file ~/.tmux.conf
+
+# Switch panes
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R

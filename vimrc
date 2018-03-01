@@ -31,7 +31,7 @@ set incsearch
 set hlsearch
 
 " To always show the statusline:
-set laststatus=2
+" set laststatus=2
 set autoindent
 set copyindent
 
@@ -60,35 +60,51 @@ let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 let g:airline_section_y = ''
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 " GLSL.vim
 let g:glsl_file_extensions = '*.glsl,*.frag,*.vert,*.geom,*.post,*.pixl,*.comp' 
-let g:glsl_default_version = 'glsl330'
+let g:glsl_default_version = 'glsl450'
 
 " Vimwiki
 let g:vimwiki_map_prefix = '<Leader>d'
 let g:vimwiki_global_ext = 0
 
+" Neodark
+let g:neodark#use_256color = 1
+
+nnoremap ; :
+inoremap jk <Esc>
+
+nnoremap <Leader>w :w<CR>
+nnoremap <CR> O<ESC>j
+nnoremap <C-w> :bd<CR>
+
 nnoremap <Leader>st :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gr :Gread<CR>
-nnoremap <Leader>w :w<CR>
 nnoremap <Leader>p :set wrap<CR>
 nnoremap <Leader>np :set nowrap<CR>
-nnoremap ; :
-inoremap jk <Esc>
 
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-noremap <C-h> <C-w>W
-noremap <C-l> <C-w>w
-noremap <C-j> :bp<CR>
-noremap <C-k> :bn<CR>
+" Unmap commands (for some reason unmap doesn't work)
+map <C-a> <Nop>
+map <C-z> <Nop>
+map <C-x> <Nop>
 
-nnoremap <CR> O<ESC>j
-nnoremap <C-w> :bd<CR>
+" Window split
+nnoremap <Leader>i :vsplit<CR>
+nnoremap <Leader>u :split<CR>
+" Window navigation
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-l> :wincmd l<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+" Buffer navigation
+noremap <C-t> :bp<CR>
+noremap <C-y> :bn<CR>
 
 noremap <F10> :!gnuplot %<CR>
 noremap <F8> :make<CR>

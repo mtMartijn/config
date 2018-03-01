@@ -4,7 +4,7 @@ set show_cursor false
 set preview_images true
 
 map <C-w> quit
-map xx console delete
+map rm console delete
 map ff console touch 
 map uz console shell aunpack %s
 map mk console mkdir 
